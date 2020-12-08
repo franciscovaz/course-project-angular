@@ -1,0 +1,14 @@
+<button class="btn btn-primary" (click)="displayInfo()">Display Details</button>
+
+<p *ngIf="showInformation">Secret password = tuna</p>
+
+<div *ngFor="let click of clicksArray">
+  <div *ngIf="click >= 5; else firstElements">
+    <p [ngStyle]="{ backgroundColor: 'blue', color: 'white'}">{{ click }}</p>
+  </div>
+
+  <ng-template #firstElements>
+    <p>{{ click }}</p>
+  </ng-template>
+
+</div>
