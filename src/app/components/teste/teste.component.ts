@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+// just a test component for exercices
 @Component({
   selector: 'app-teste',
   templateUrl: './teste.component.html',
