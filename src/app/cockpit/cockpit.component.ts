@@ -12,7 +12,7 @@ export class CockpitComponent implements OnInit {
 
   serverElements = [];
   newServerContent = '';
-
+//just testing, tomorrow will be awesome day of study
   constructor() { }
 
   ngOnInit(): void {
