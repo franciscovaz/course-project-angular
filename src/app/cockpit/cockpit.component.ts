@@ -13,9 +13,6 @@ export class CockpitComponent implements OnInit {
   serverElements = [];
   // newServerContent = '';
   @ViewChild('serverContentInput', { static: true }) serverContentInput : ElementRef;
-  @ViewChild('serverContentInput', {static: true}) serverContentInput2: ElementRef;
-
-  // Getting acces to the template & DOM with @ViewChild
 
   constructor() { }
 
