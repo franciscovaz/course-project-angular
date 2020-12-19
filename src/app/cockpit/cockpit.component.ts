@@ -13,6 +13,7 @@ export class CockpitComponent implements OnInit {
   serverElements = [];
   // newServerContent = '';
   @ViewChild('serverContentInput', { static: true }) serverContentInput : ElementRef;
+  @ViewChild('serverContentInput', {static: true}) serverContentInput2: ElementRef;
 
   // Getting acces to the template & DOM with @ViewChild
 
@@ -22,7 +23,6 @@ export class CockpitComponent implements OnInit {
   }
 
   onAddServer(inputName: HTMLInputElement) {
-    console.log(this.serverContentInput.nativeElement.value);
     this.serverCreated.emit({
       serverName: inputName.value,
       serverContent: this.serverContentInput.nativeElement.value
