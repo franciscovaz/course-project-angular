@@ -29,7 +29,7 @@ AfterViewChecked,
 OnDestroy {
   @Input('srvElement') element: {type: string, name: string, content: string};
   @Input() name: string;
-  @ViewChild('heading') header: ElementRef;
+  @ViewChild('heading', { static: true}) header: ElementRef;
 
   constructor() {
     console.log('constructor called!');
