@@ -5,11 +5,13 @@ import {
   AfterViewInit,
   Component,
   DoCheck,
+  ElementRef,
   Input,
   OnChanges,
   OnDestroy,
   OnInit,
-  SimpleChanges
+  SimpleChanges,
+  ViewChild
 } from '@angular/core';
 
 @Component({
@@ -27,6 +29,7 @@ AfterViewChecked,
 OnDestroy {
   @Input('srvElement') element: {type: string, name: string, content: string};
   @Input() name: string;
+  @ViewChild('heading') header: ElementRef;
 
   constructor() {
     console.log('constructor called!');
@@ -40,6 +43,7 @@ OnDestroy {
 
   ngOnInit(): void {
     console.log('ngOnInit called!');
+    console.log(this.header.nativeElement.textContent);
   }
 
   ngDoCheck() {
@@ -56,6 +60,7 @@ OnDestroy {
 
   ngAfterViewInit() {
     console.log('ngAfterViewInit called!');
+    console.log(this.header.nativeElement.textContent);
   }
 
   ngAfterViewChecked() {
