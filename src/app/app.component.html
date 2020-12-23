@@ -35,3 +35,10 @@
   </div>
   <div class="col-sm-4"></div>
 </div>
+
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="6">Value is 6</p>
+  <p *ngSwitchCase="20">Value is 20</p>
+  <p *ngSwitchCase="80">Value is 80</p>
+  <p *ngSwitchCase="100">Value is 100</p>
+</div>

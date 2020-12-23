@@ -13,6 +13,7 @@ export class AppComponent {
       content: 'This is a test'
     }
   ];
+  value: number = 100;
 
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
