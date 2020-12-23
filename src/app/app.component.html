@@ -9,6 +9,9 @@
         [name]="serverElement.name">
         <p #contentParagraph>
           <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
+          <ng-template [ngIf]="serverElement.type === 'server'">
+            <strong style="color: red">{{ serverElement.content }}</strong>
+          </ng-template>
           <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
         </p>
       </app-server-element>
@@ -17,4 +20,18 @@
 </div>
 
 <p appBasicHighlight>Style me with basic directive!</p>
-<p appBetterHighlight>Style me with a better directive!</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <p [appBetterHighlight]="'green'" defaultColor="yellow">Style me with a better directive!</p>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
